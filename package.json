@@ -2,7 +2,6 @@
   "name": "react-grammar",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
   "scripts": {
     "server": "node server.js",
     "client": "cd client && yarn start",
