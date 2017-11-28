@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Configure body parser for AJAX requests
@@ -26,3 +26,8 @@ mongoose.connect(
 //Setup Mongoose DB
 const db = require("./models")
 const { Article } = db;
+
+// -------------------------------------------------
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});

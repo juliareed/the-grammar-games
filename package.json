@@ -2,15 +2,19 @@
   "name": "react-grammar",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000",
   "dependencies": {
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17",
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
+    "bootstrap": "4.0.0-beta.2",
     "create-react-class": "^15.6.2",
     "express": "^4.15.4",
-    "mongoose": "^4.13.4"
+    "mongoose": "^4.13.4",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "reactstrap": "^5.0.0-alpha.4"
   },
   "scripts": {
     "start": "react-scripts start",
