@@ -1,3 +1,3 @@
 module.exports = {
-    Question: require("./question")
+    Question: require("./Question")
 }

@@ -17,17 +17,12 @@ if (process.env.NODE_ENV === "production") {
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/the-grammar-games",
+  process.env.MONGODB_URI || "mongodb://localhost/thegrammargames",
   {
     useMongoClient: true
   }
 );
 
-//Setup Mongoose DB
-const db = require("./models")
-const { Article } = db;
-
-// -------------------------------------------------
 app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+  console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
