@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from "./Navbar/Navbar"
+import Video from "./Video/Video"
 
 class Main extends Component {
   
@@ -9,6 +10,7 @@ class Main extends Component {
         <div className="main-container">
           <div className="container">
           <Navbar />
+          <Video />
   
             <footer>
               <hr />
