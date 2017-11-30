@@ -1,4 +1,8 @@
 import React from 'react';
+import data from '../../data/data';
+import Answers from "../Answers/Answers";
+import Footer from "../Footer/Footer";
+import Popup from "../Popup/Popup";
 
 class Quiz extends React.Component {
     constructor(props) {
@@ -88,10 +92,9 @@ class Quiz extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
             </div>
         );
     }
 };
 
-export default Quiz
+export default Quiz;

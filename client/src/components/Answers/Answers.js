@@ -66,4 +66,4 @@ class Answers extends React.Component {
     }
 }
 
-export default Answers
+export default Answers;

@@ -26,7 +26,7 @@ class Popup extends React.Component {
             
             this.props.startQuiz();
         } else {
-            //eslint-disable-next-line            
+            // eslint-disable-next-line            
             location.reload();// restart the application
         }
     }
