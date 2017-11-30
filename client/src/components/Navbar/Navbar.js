@@ -1,5 +1,10 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import "./navbar.css";
+
+const textColor = {
+  color: "white"
+}
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -15,19 +20,20 @@ export default class Example extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <Navbar className = "navbar" color="faded" light expand="md">
+          <NavbarBrand style={textColor} href="/">The Grammar Games</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink style={textColor} href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                <NavLink style={textColor} href="/">Logout</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

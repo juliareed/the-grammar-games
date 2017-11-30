@@ -1,5 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
+import "./video.css"
 
 class Video extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class Video extends React.Component {
     };
 
     return (
-      <YouTube
+      <YouTube className = "youtubevid"
         videoId="UejW-WQpujs"
         opts={opts}
         onReady={this._onReady}

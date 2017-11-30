@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from "./Navbar/Navbar"
 import Video from "./Video/Video"
+import Footer from "./Footer/Footer"
+// import Quiz from "./Quiz/Quiz"
+import "./main.css"
 
 class Main extends Component {
   
@@ -10,15 +13,11 @@ class Main extends Component {
         <div className="main-container">
           <div className="container">
           <Navbar />
+          <br/>
           <Video />
-  
-            <footer>
-              <hr />
-              <p className="pull-right">
-                <i>Techy && Cute, Inc.</i>
-              
-              </p>
-            </footer>
+          <br/>
+          <hr />
+          <Footer />
           </div>
         </div>
       );
