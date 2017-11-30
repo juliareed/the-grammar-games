@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Answers extends React.Component {
+class Answers extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,14 +34,12 @@ class Answers extends React.Component {
 
             this.props.showButton();
         }
-    }
-    
-    shouldComponentUpdate() {
+
         this.setState({
             classNames: ['', '', '', '']
         });
-        return true;
     }
+    
     
     render() {
         let { answers } = this.props;

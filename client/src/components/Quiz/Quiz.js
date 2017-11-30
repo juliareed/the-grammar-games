@@ -67,9 +67,9 @@ class Quiz extends React.Component {
     }
 
     handleIncreaseScore() {
-        this.setState({
-            score: this.state.score + 1
-        });
+        let score = this.state.score +1
+
+        this.setState({score});
     }
 
     render() {
