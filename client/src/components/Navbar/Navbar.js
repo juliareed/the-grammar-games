@@ -25,7 +25,7 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar className = "navbar" color="faded" light expand="md">
-          <NavbarBrand style={textColor} href="/">The Grammar Games</NavbarBrand>
+          <NavbarBrand style={textColor} href="/"><img src={"https://cdn.dribbble.com/users/201560/screenshots/2179479/pencil-brilliant.gif"} width={80} height={60} />  The Grammar Games</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
