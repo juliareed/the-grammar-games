@@ -24,10 +24,9 @@ class Sixth extends Component {
           <Navbar />
           <br/>
           <p>
-            <button className="btn btn-primary btn-lg">3rd Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">4th Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">5th Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">6th Grade</button>
+            <button className="btn btn-primary btn-lg">Possessive pronouns</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-primary btn-lg">Reflexive pronouns</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-primary btn-lg">The perfect aspect of verbs</button>&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
           <br/>
           <hr />

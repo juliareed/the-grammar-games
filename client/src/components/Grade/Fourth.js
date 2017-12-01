@@ -24,10 +24,9 @@ class Fourth extends Component {
           <Navbar />
           <br/>
           <p>
-            <button className="btn btn-primary btn-lg">3rd Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">4th Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">5th Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">6th Grade</button>
+            <button className="btn btn-primary btn-lg">Prepositional phrases</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-primary btn-lg">Coordinating conjunctions</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-primary btn-lg">Relative pronouns</button>&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
           <br/>
           <hr />

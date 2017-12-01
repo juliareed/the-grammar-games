@@ -24,10 +24,9 @@ class Third extends Component {
           <Navbar />
           <br/>
           <p>
-            <button className="btn btn-primary btn-lg">3rd Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">4th Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">5th Grade</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button className="btn btn-primary btn-lg">6th Grade</button>
+            <button className="btn btn-primary btn-lg">Three ways to end a sentence</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-primary btn-lg">Common and proper nouns</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button className="btn btn-primary btn-lg">Personal pronouns</button>&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
           <br/>
           <hr />
