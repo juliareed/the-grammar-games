@@ -1,6 +1,13 @@
 .navbar {
     background-color: #BCD4DE;
     width: 100%;
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.NavbarBrand {
+    font-size: 50px;
 }
 
 .img {
