@@ -11,9 +11,13 @@ class Fifth extends Component {
           <div className="container">
           <br/>
           <p>
-          <Link to="/fifth/punctuating"><button className="btn btn-primary btn-md">Punctuating A List</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to="/fifth/correlativeconjunctions"><button className="btn btn-primary btn-md">Correlative Conjunctions</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to="/fifth/introverbtense"><button className="btn btn-primary btn-md">Introduction to Verb Tense</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
+          {  (window.location.pathname == "/fifth/punctuating" || window.location.pathname == "/fifth/correlativeconjunctions" || window.location.pathname == "/fifth/introverbtense") ? "" :
+            <div>
+              <Link to="/fifth/punctuating"><button className="btn btn-primary btn-md">Punctuating A List</button></Link>
+              <Link to="/fifth/correlativeconjunctions"><button className="btn btn-primary btn-md">Correlative Conjunctions</button></Link>
+              <Link to="/fifth/introverbtense"><button className="btn btn-primary btn-md">Introduction to Verb Tense</button></Link>
+            </div>
+          }
           </p>
           <br/>
           </div>
