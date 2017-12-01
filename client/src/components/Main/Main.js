@@ -14,7 +14,7 @@ class Main extends Component {
           <Navbar />
           <br/>
           <p>
-            {  (window.location.pathname == "/third") ? "" :
+            {  (window.location.pathname === "/third" || window.location.pathname === "/fourth" || window.location.pathname === "/fifth" || window.location.pathname === "/sixth") ? "" :
             <div>
                <Link to="/third"><button className="btn btn-primary btn-md">3rd Grade</button></Link>
                <Link to="/fourth"><button className="btn btn-primary btn-md">4th Grade</button></Link>
