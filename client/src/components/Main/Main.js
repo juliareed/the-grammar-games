@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
+import Video from "../Video/Video"
 import "./main.css"
 
 class Main extends Component {
@@ -13,7 +14,7 @@ class Main extends Component {
           <Navbar />
           <br/>
           <p>
-            {  (window.location.pathname == "/third") ? "" :
+            {  (window.location.pathname === "/third" || window.location.pathname === "/fourth" || window.location.pathname === "/fifth" || window.location.pathname === "/sixth") ? "" :
             <div>
                <Link to="/third"><button className="btn btn-primary btn-md">3rd Grade</button></Link>
                <Link to="/fourth"><button className="btn btn-primary btn-md">4th Grade</button></Link>

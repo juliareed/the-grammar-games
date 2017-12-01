@@ -11,10 +11,9 @@ class Video extends React.Component {
         autoplay: 1
       }
     };
-
     return (
       <YouTube className = "youtubevid"
-        videoId="UejW-WQpujs"
+        videoId={this.props.match.params.vidId}
         opts={opts}
         onReady={this._onReady}
       />
