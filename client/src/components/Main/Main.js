@@ -10,8 +10,7 @@ class Main extends Component {
     render() {
   
       return (
-        <div className="main-container">
-          <div className="container">
+        <div>
           <Navbar />
           <br/>
           <p>
@@ -27,7 +26,6 @@ class Main extends Component {
           <br/>
           <Footer />
           </div>
-        </div>
        
        
       );

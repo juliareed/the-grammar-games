@@ -33,6 +33,9 @@ export default class Example extends React.Component {
                 <NavLink style={textColor} href="/">Home</NavLink>
               </NavItem>
               <NavItem>
+                <NavLink style={textColor} href="/leaderboard">Leaderboard</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink style={textColor} href="/">Logout</NavLink>
               </NavItem>
             </Nav>
