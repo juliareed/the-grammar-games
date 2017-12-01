@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import "./grade.css"
+import "./grade.css";
+import Video from "../Video/Video";
 
 class Fourth extends Component {
-     
+    
     render() {
   
       return (

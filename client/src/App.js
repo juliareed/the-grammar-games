@@ -5,6 +5,7 @@ import Fourth from "../src/components/Grades/Fourth.js"
 import Fifth from "../src/components/Grades/Fifth.js"
 import Sixth from "../src/components/Grades/Sixth.js"
 import Main from "../src/components/Main/Main.js"
+import Leaderboard from "../src/components/Leaderboard/Leaderboard.js"
 
 
 const App = () =>
@@ -27,6 +28,7 @@ const App = () =>
       <Route path="/sixth/possessivepronouns" component={Sixth} />
       <Route path="/sixth/reflexivepronouns" component={Sixth} />
       <Route path="/sixth/perfectverbs" component={Sixth} />
+      <Route path="/leaderboard" component={Leaderboard} />
     </div>
   </Router>
   

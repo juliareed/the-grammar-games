@@ -21,6 +21,7 @@
     "create-react-class": "^15.6.2",
     "express": "^4.15.4",
     "mongoose": "^4.13.4",
+    "pure-css": "^1.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -31,9 +32,9 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
-    "nodemon": "^1.12.1",
     "css-loader": "^0.26.1",
     "json-loader": "^0.5.4",
+    "nodemon": "^1.12.1",
     "react-addons-css-transition-group": "^15.4.1",
     "style-loader": "^0.13.1"
   }

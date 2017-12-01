@@ -1,0 +1,15 @@
+.Leaderboard {
+    text-align: center;
+}
+
+.Leaderboard-intro {
+    font-size: large;
+}
+
+.main {
+    margin-left: 440px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    text-align: center;
+    bottom: 60px;
+}
