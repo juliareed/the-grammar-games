@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #BCD4DE;
+    background-color: #A0B9BF;
     width: 100%;
     font-family: 'Bungee Hairline', cursive;
     font-size: 30px;
@@ -13,4 +13,39 @@
 .img {
     width: 10px;
     height: 10px;
+}
+
+#customBtn {
+    display: inline-block;
+    width: 120px;
+}
+
+#customBtn:hover {
+    cursor: pointer;
+}
+
+span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+
+span.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#login {
+    width: 130px;
+    height: 40px;
+    background-image: url("./signin.png");
+    background-size: 130px 40px;
+    display: inline-block;
+}
+
+#logout {
+    width: 70px;
+    height: 30px;
+    background-image: url("./signout.png");
+    background-size: 70px 30px;
+    display: inline-block;
 }

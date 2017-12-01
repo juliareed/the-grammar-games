@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    username: { type: String, required: true },
+const findOrCreate = require("mongoose-findorcreate");
+
+const schema = new Schema({
+    displayName: { type: String },
     email: { type: String, required: true },
-    scores: { type: Number }
+    scores: { type: Date, default: Date.now },
 });
 
-const User = mongoose.model("User", userSchema);
+schema.plugin(findOrCreate);
 
-module.exports = User;
+const Student = mongoose.model("Student", schema);
+
+module.exports = Student;
