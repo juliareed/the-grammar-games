@@ -14,13 +14,12 @@ class Main extends Component {
           <Navbar />
           <br/>
           <p>
-            <Link to="/third"><button className="btn btn-primary btn-lg">3rd Grade</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to="/fourth"><button className="btn btn-primary btn-lg">4th Grade</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to="/fifth"><button className="btn btn-primary btn-lg">5th Grade</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to="/sixth"><button className="btn btn-primary btn-lg">6th Grade</button></Link>
+            <Link to="/third"><button className="btn btn-primary btn-md">3rd Grade</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to="/fourth"><button className="btn btn-primary btn-md">4th Grade</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to="/fifth"><button className="btn btn-primary btn-md">5th Grade</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to="/sixth"><button className="btn btn-primary btn-md">6th Grade</button></Link>
           </p>
           <br/>
-          <hr />
           <Footer />
           </div>
         </div>
