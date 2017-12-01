@@ -13,9 +13,9 @@ class Fifth extends Component {
           <p>
           {  (window.location.pathname == "/fifth/punctuating" || window.location.pathname == "/fifth/correlativeconjunctions" || window.location.pathname == "/fifth/introverbtense") ? "" :
             <div>
-              <Link to="/fifth/punctuating"><button className="btn btn-primary btn-md">Punctuating A List</button></Link>
-              <Link to="/fifth/correlativeconjunctions"><button className="btn btn-primary btn-md">Correlative Conjunctions</button></Link>
-              <Link to="/fifth/introverbtense"><button className="btn btn-primary btn-md">Introduction to Verb Tense</button></Link>
+              <Link to="/fifth/punctuating/DBMQOK64VQY"><button className="btn btn-primary btn-md">Punctuating a List</button></Link>
+              <Link to="/fifth/correlativeconjunctions/R74Ly00UygU"><button className="btn btn-primary btn-md">Correlative Conjunctions</button></Link>
+              <Link to="/fifth/introverbtense/faUvT7zfsyk"><button className="btn btn-primary btn-md">Introduction to Verb Tense</button></Link>
             </div>
           }
           </p>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
+import Video from "../Video/Video"
 import "./main.css"
 
 class Main extends Component {
