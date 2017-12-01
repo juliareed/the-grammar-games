@@ -11,9 +11,13 @@ class Fourth extends Component {
           <div className="container">
           <br/>
           <p>
-          <Link to="/fourth/phrases"><button className="btn btn-primary btn-md">Prepositional Phrases</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to="/fourth/conjunctions"><button className="btn btn-primary btn-md">Coordinating Conjunctions</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to="/fourth/relativepronouns"><button className="btn btn-primary btn-md">Relative Pronouns</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
+          {  (window.location.pathname == "/fourth/phrases" || window.location.pathname == "/fourth/conjunctions" || window.location.pathname == "/fourth/relativepronouns") ? "" :
+            <div>
+              <Link to="/fifth/punctuating"><button className="btn btn-primary btn-md">Punctuating A List</button></Link>
+              <Link to="/fourth/conjunctions"><button className="btn btn-primary btn-md">Correlative Conjunctions</button></Link>
+              <Link to="/fourth/relativepronouns"><button className="btn btn-primary btn-md">Introduction to Verb Tense</button></Link>
+            </div>
+          }
           </p>
           <br/>
           </div>

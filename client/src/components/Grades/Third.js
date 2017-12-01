@@ -11,10 +11,15 @@ class Third extends Component {
           <div className="container">
           <br/>
           <p>
-            <Link to="/third/sentence"><button className="btn btn-primary btn-md">Three Ways to End a Sentence</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to="/third/nouns"><button className="btn btn-primary btn-md">Common and Proper Nouns</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to="/third/pronouns"><button className="btn btn-primary btn-md">Personal Pronouns</button></Link>&nbsp;&nbsp;&nbsp;&nbsp;
-          </p>
+
+          {  (window.location.pathname == "/third/sentence" || window.location.pathname == "/third/nouns" || window.location.pathname == "/third/pronouns") ? "" :
+            <div>
+              <Link to="/third/sentence"><button className="btn btn-primary btn-md">Punctuating A List</button></Link>
+              <Link to="/third/nouns"><button className="btn btn-primary btn-md">Correlative Conjunctions</button></Link>
+              <Link to="/third/pronouns"><button className="btn btn-primary btn-md">Introduction to Verb Tense</button></Link>
+            </div>
+          }
+         </p>
           <br/>
           </div>
         </div>
