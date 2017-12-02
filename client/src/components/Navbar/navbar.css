@@ -10,10 +10,11 @@
     font-size: 50px;
 }
 
-.img {
+
+/* .img {
     width: 10px;
     height: 10px;
-}
+} */
 
 #login {
     width: 130px;
@@ -21,6 +22,7 @@
     background-image: url("./signin.png");
     background-size: 130px 40px;
     display: inline-block;
+    padding-right: 50px;
 }
 
 #logout {

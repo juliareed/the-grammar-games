@@ -51,6 +51,9 @@ export default class Example extends React.Component {
                 <NavLink id="login" href={authUrl} />
               </NavItem>
               <NavItem>
+                <NavLink> <br/> </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink id="logout" href="/logout" />
               </NavItem>
             </Nav>
