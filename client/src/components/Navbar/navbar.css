@@ -10,29 +10,11 @@
     font-size: 50px;
 }
 
-.img {
+
+/* .img {
     width: 10px;
     height: 10px;
-}
-
-#customBtn {
-    display: inline-block;
-    width: 120px;
-}
-
-#customBtn:hover {
-    cursor: pointer;
-}
-
-span.label {
-    font-family: serif;
-    font-weight: normal;
-}
-
-span.icon {
-    display: inline-block;
-    vertical-align: middle;
-}
+} */
 
 #login {
     width: 130px;
@@ -40,6 +22,7 @@ span.icon {
     background-image: url("./signin.png");
     background-size: 130px 40px;
     display: inline-block;
+    padding-right: 50px;
 }
 
 #logout {
