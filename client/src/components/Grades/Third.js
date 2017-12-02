@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import "./grade.css"
+import "./grade.css";
 
 class Third extends Component {
      
@@ -12,7 +12,7 @@ class Third extends Component {
           <br/>
           <p>
 
-          {  (window.location.pathname == "/third/sentence" || window.location.pathname == "/third/nouns" || window.location.pathname == "/third/pronouns") ? "" :
+          {  (window.location.pathname === "/third/sentence" || window.location.pathname === "/third/nouns" || window.location.pathname === "/third/pronouns") ? "" :
             <div>
               <Link to={"/third/sentence/B9bJaoIHRp4"} ><button className="btn btn-primary btn-md">Three Ways to End a Sentence</button></Link>
               <Link to="/third/nouns/bGz1acC3Wew"><button className="btn btn-primary btn-md">Common and Proper Nouns </button></Link>

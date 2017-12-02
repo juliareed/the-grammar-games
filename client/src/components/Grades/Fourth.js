@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import "./grade.css";
-import Video from "../Video/Video";
 
 class Fourth extends Component {
     
@@ -12,7 +11,7 @@ class Fourth extends Component {
           <div className="container">
           <br/>
           <p>
-          {  (window.location.pathname == "/fourth/phrases" || window.location.pathname == "/fourth/conjunctions" || window.location.pathname == "/fourth/relativepronouns") ? "" :
+          {  (window.location.pathname === "/fourth/phrases" || window.location.pathname === "/fourth/conjunctions" || window.location.pathname === "/fourth/relativepronouns") ? "" :
             <div>
               <Link to="/fourth/phrases/7dOBMUESkqk"><button className="btn btn-primary btn-md">Prepositional Phrases</button></Link>
               <Link to="/fourth/conjunctions/imwtcmvk668"><button className="btn btn-primary btn-md">Coordinating Conjunctions</button></Link>

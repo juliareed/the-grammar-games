@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import "./grade.css"
+import "./grade.css";
 
 class Fifth extends Component {
      
@@ -11,7 +11,7 @@ class Fifth extends Component {
           <div className="container">
           <br/>
           <p>
-          {  (window.location.pathname == "/fifth/punctuating" || window.location.pathname == "/fifth/correlativeconjunctions" || window.location.pathname == "/fifth/introverbtense") ? "" :
+          {  (window.location.pathname === "/fifth/punctuating" || window.location.pathname === "/fifth/correlativeconjunctions" || window.location.pathname === "/fifth/introverbtense") ? "" :
             <div>
               <Link to="/fifth/punctuating/DBMQOK64VQY"><button className="btn btn-primary btn-md">Punctuating a List</button></Link>
               <Link to="/fifth/correlativeconjunctions/R74Ly00UygU"><button className="btn btn-primary btn-md">Correlative Conjunctions</button></Link>
