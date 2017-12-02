@@ -14,22 +14,6 @@ const tabColor = {
   fontSize: 20
 }
 
-const loginStyle ={
-  width: "130px",
-  height: "40px",
-  backgroundImage: 'url('+ {LoginBackground} +')',
-  backgroundWidth: "130px",
-  backgroundHeight: "40px",
-}
-
-const logoutStyle= {
-  width: 70,
-  height: 30,
-  backgroundImage: 'url('+ {LogoutBackground} +')',
-  backgroundWidth: 70,
-  backgroundHeight: 30,
-}
-
  const authUrl = document.location.href.includes("localhost")
     ? "//localhost:3001/auth/google"
     : "/auth/google";
@@ -64,10 +48,10 @@ export default class Example extends React.Component {
                 <NavLink style={tabColor} href="/leaderboard">Leaderboard</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink type="button" id="login" style={loginStyle} href={authUrl} />
+                <NavLink id="login" href={authUrl} />
               </NavItem>
               <NavItem>
-                <NavLink type="button" id="logout" style={logoutStyle} href="/logout" />
+                <NavLink id="logout" href="/logout" />
               </NavItem>
             </Nav>
           </Collapse>
