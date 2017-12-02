@@ -15,25 +15,6 @@
     height: 10px;
 }
 
-#customBtn {
-    display: inline-block;
-    width: 120px;
-}
-
-#customBtn:hover {
-    cursor: pointer;
-}
-
-span.label {
-    font-family: serif;
-    font-weight: normal;
-}
-
-span.icon {
-    display: inline-block;
-    vertical-align: middle;
-}
-
 #login {
     width: 130px;
     height: 40px;

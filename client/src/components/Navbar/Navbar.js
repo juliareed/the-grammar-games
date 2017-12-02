@@ -1,6 +1,8 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import "./navbar.css";
+import LoginBackground from './signin.png';
+import LogoutBackground from './signout.png';
 
 const textColor = {
   color: "white",
@@ -12,8 +14,20 @@ const tabColor = {
   fontSize: 20
 }
 
-const toggleColor = {
-  color: "white"
+const loginStyle ={
+  width: "130px",
+  height: "40px",
+  backgroundImage: 'url('+ {LoginBackground} +')',
+  backgroundWidth: "130px",
+  backgroundHeight: "40px",
+}
+
+const logoutStyle= {
+  width: 70,
+  height: 30,
+  backgroundImage: 'url('+ {LogoutBackground} +')',
+  backgroundWidth: 70,
+  backgroundHeight: 30,
 }
 
  const authUrl = document.location.href.includes("localhost")
@@ -40,7 +54,7 @@ export default class Example extends React.Component {
       <div>
         <Navbar className = "navbar" color="faded" light expand="md">
           <NavbarBrand style={textColor} href="/">  The Grammar Games</NavbarBrand>
-          <NavbarToggler style={toggleColor} onClick={this.toggle} />
+          <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
@@ -49,21 +63,13 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink style={tabColor} href="/leaderboard">Leaderboard</NavLink>
               </NavItem>
-              <NavLink>
-                <div id="gSignInWrapper">
-                    <div id="customBtn" class="customGPlusSignIn" href={authUrl}>
-                      <button id="login" href={authUrl}></button>
-                    </div>
-                </div>
-              </NavLink>
-              <NavLink>
-                <div id="gSignInWrapper">
-                    <div id="customBtn" class="customGPlusSignIn" href={authUrl}>
-                      <button id="logout" href="/logout"></button>
-                    </div>
-                </div>
-              </NavLink>
-              </Nav>
+              <NavItem>
+                <NavLink type="button" id="login" style={loginStyle} href={authUrl} />
+              </NavItem>
+              <NavItem>
+                <NavLink type="button" id="logout" style={logoutStyle} href="/logout" />
+              </NavItem>
+            </Nav>
           </Collapse>
         </Navbar>
       </div>
