@@ -5,6 +5,8 @@ import data from "./data"
 
 export default class Quiz extends React.Component {
 
+
+
   constructor(props) {
       super(props)
       this.state = {
@@ -15,8 +17,13 @@ export default class Quiz extends React.Component {
   }
 
   componentDidMount() {
+      let quizId = this.props.match.params.quizId;
+      if (quizId === "data") {
       this.setState({quiz: data })
-    }
+      } else if (quizId === "somethingelse") {
+        this.setState({quiz: "" })
+      }
+  }
 
   handleSubmit() {
     if (this.state.index < this.state.quiz.questions.length) {

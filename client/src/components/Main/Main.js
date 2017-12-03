@@ -14,7 +14,6 @@ class Main extends Component {
         <div>
           <Navbar />
           <br/>
-          <Quiz />
           <p>
             {  (window.location.pathname === "/third" || window.location.pathname === "/fourth" || window.location.pathname === "/fifth" || window.location.pathname === "/sixth") ? "" :
             <div>

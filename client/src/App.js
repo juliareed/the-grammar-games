@@ -7,6 +7,7 @@ import Sixth from "../src/components/Grades/Sixth.js"
 import Main from "../src/components/Main/Main.js"
 import Video from "./components/Video/Video"
 import Leaderboard from "../src/components/Leaderboard/Leaderboard.js"
+import Quiz from "./components/Quiz"
 
 
 const App = () =>
@@ -29,6 +30,8 @@ const App = () =>
       <Route path="/sixth/possessivepronouns/:vidId" component={Video} />
       <Route path="/sixth/reflexivepronouns/:vidId" component={Video} />
       <Route path="/sixth/perfectverbs/:vidId" component={Video} />
+      <Route path="/third/sentence/:vidId/:quizId" component={Quiz} />
+      <Route path="/third/nouns/:vidId/:quizId" component={Quiz} />
     </div>
   </Router>
   
