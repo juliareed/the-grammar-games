@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Quiz from '../Quiz.js';
+
 import "./main.css"
 
 class Main extends Component {
@@ -12,6 +14,7 @@ class Main extends Component {
         <div>
           <Navbar />
           <br/>
+          <Quiz />
           <p>
             {  (window.location.pathname === "/third" || window.location.pathname === "/fourth" || window.location.pathname === "/fifth" || window.location.pathname === "/sixth") ? "" :
             <div>
