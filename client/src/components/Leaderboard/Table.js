@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Tablehead from './Tablehead';
 import Tablerow from './Tablerow';
 import 'pure-css';
+import './table.css';
 
 export default class Table extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class Table extends Component {
       <table className="pure-table">
         <Tablehead onChange={this.handleSort} />
         <tbody>
-          // ADD STUFF HERE
+          {rows}
         </tbody>
       </table>
     )
