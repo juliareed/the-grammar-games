@@ -1,7 +1,7 @@
 import React from 'react'
 import Question from './Question'
 import data from "./data"
-
+import "./quiz.css"
 
 export default class Quiz extends React.Component {
 
@@ -52,11 +52,11 @@ export default class Quiz extends React.Component {
     }
 
     return (
-      <div>
+      <div id="quiz">
         <h1>{quiz.title}</h1>
         {completed ?
           <div>
-            <p>Congratulation, you finished the quiz</p>
+            <p>Congratulations, you finished the quiz!</p>
             Your score is {score}
           </div>
         :
