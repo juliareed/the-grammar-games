@@ -104,7 +104,7 @@ passport.use(
 
             // const { username, displayName } = profile;
 
-            const displayName = 'Julia'
+            const displayName = profile.displayName;
                 // needs a database to handle oauth postbacks
             if (mongoose.connection.readyState === 0)
                 throw new Error("Need MONGO connection to handle OAuth");
