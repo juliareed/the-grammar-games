@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+// const cookieParser = require("cookie-parser")
 const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -29,51 +30,6 @@ mongoose.connect(
         useMongoClient: true
     }
 );
-// schema that will hold user info
-// var UserSchema = new mongoose.Schema({
-//     name: {
-//         type: String,
-//         unique: true,
-//         required: true,
-//         trim: true
-//     },
-//     email: {
-//         type: String,
-//         unique: true,
-//         required: true,
-//         trim: true
-//     },
-//     points: {
-//         type: Number,
-//         required: true,
-//         trim: true
-//     }
-// });
-
-// var User = mongoose.model('User', UserSchema);
-// module.exports = User;
-
-// insert data into mongodb
-
-// if (req.body.name &&
-//     req.body.email &&
-//     req.body.points) {
-
-//     var userData = {
-//         email: req.body.email,
-//         name: req.body.name,
-//         points: req.body.points
-//     }
-
-//     //use schema.create to insert data into the db
-//     User.create(userData, function(err, user) {
-//         if (err) {
-//             return next(err)
-//         } else {
-//             return res.redirect('/profile');
-//         }
-//     });
-// }
 
 // google auth
 
@@ -104,8 +60,8 @@ passport.use(
 
             // const { username, displayName } = profile;
 
-            const displayName = 'Julia'
-                // needs a database to handle oauth postbacks
+            const displayName = profile.displayName;
+            // needs a database to handle oauth postbacks
             if (mongoose.connection.readyState === 0)
                 throw new Error("Need MONGO connection to handle OAuth");
 
@@ -140,6 +96,8 @@ app.get(
     }
 );
 /* End Auth */
+
+app.get()
 
 // route for logging out
 app.get('/logout', function(req, res) {
