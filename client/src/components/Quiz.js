@@ -13,6 +13,7 @@ import data10 from "../data/data10"
 import data11 from "../data/data11"
 import data12 from "../data/data12"
 import "../components/quiz.css"
+import { Link } from "react-router-dom";
 
 export default class Quiz extends React.Component {
 
@@ -96,6 +97,8 @@ export default class Quiz extends React.Component {
           <div>
             <p>Congratulations, you finished the quiz!</p>
             Your score is {score}
+            <br/>
+            <Link to='/'><button className="btn">Back to main page</button></Link>
           </div>
         :
           <div>

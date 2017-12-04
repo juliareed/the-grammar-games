@@ -13,9 +13,9 @@ class Fourth extends Component {
           <p>
           {  (window.location.pathname === "/fourth/phrases" || window.location.pathname === "/fourth/conjunctions" || window.location.pathname === "/fourth/relativepronouns") ? "" :
             <div>
-              <Link to="/fourth/phrases/7dOBMUESkqk"><button className="btn btn-primary btn-md">Prepositional Phrases</button></Link>
-              <Link to="/fourth/conjunctions/imwtcmvk668"><button className="btn btn-primary btn-md">Coordinating Conjunctions</button></Link>
-              <Link to="/fourth/relativepronouns/ZHzKQkX3IxI"><button className="btn btn-primary btn-md">Relative Pronouns</button></Link>
+              <Link to="/fourth/phrases/7dOBMUESkqk"><button className="btn">Prepositional Phrases</button></Link>
+              <Link to="/fourth/conjunctions/imwtcmvk668"><button className="btn">Coordinating Conjunctions</button></Link>
+              <Link to="/fourth/relativepronouns/ZHzKQkX3IxI"><button className="btn">Relative Pronouns</button></Link>
             </div>
           }
           </p>
