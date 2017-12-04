@@ -27,3 +27,11 @@
     background-size: 70px 30px;
     display: inline-block;
 }
+
+.username {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Crimson Text', serif;
+    color: #A0B9BF;
+}

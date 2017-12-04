@@ -4,6 +4,8 @@ import "./navbar.css";
 import LoginBackground from './signin.png';
 import LogoutBackground from './signout.png';
 import axios from 'axios';
+import Cookies from 'universal-cookie';
+import $ from 'jquery';
 
 const textColor = {
   color: "white",
@@ -15,9 +17,15 @@ const tabColor = {
   fontSize: 20
 }
 
+const userStyle = {
+  fontSize: 15
+}
+
  const authUrl = document.location.href.includes("localhost")
     ? "//localhost:3001/auth/google"
     : "/auth/google";
+
+const cookies = new Cookies();
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -30,26 +38,15 @@ export default class Example extends React.Component {
   }
 
   componentDidMount() {
-    this.displayName();
+    console.log(document.cookie);
+    let cookie = cookies.get('gg-user');
+    $('.username').append(`<h2>${cookie}</h2>`);
   }
 
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
-
-  displayName() {
-    axios.get('auth/google/callback')
-    .then(function(res){
-      res.redirect(
-      process.env.NODE_ENV === "production" ? "/" : "//localhost:3000/"
-      );
-      console.log(res.user.displayName);
-      let username = res.user.displayName;
-      console.log(username);
-      document.getElementById("username").appendChild(`<p>${username}<p>`)
-    })
   }
 
   render() {
@@ -69,8 +66,6 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink id="login" href={authUrl} />
               </NavItem>
-              <NavItem id="username">
-              </NavItem>
               <NavItem>
                 <NavLink> <br/> </NavLink>
               </NavItem>
@@ -78,8 +73,10 @@ export default class Example extends React.Component {
                 <NavLink id="logout" href="/logout" />
               </NavItem>
             </Nav>
+            
           </Collapse>
         </Navbar>
+         <div className="username" style={userStyle} />
       </div>
     );
   }

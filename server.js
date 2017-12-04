@@ -1,6 +1,7 @@
 const express = require("express");
+const session = require("express-session");
 const bodyParser = require("body-parser");
-// const cookieParser = require("cookie-parser")
+const cookieParser = require("cookie-parser")
 const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -17,6 +18,13 @@ const OAUTH_SECRET = "i5NbeEN0Cob675MQFHq6LD-R"
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(
+    session({ secret: "thegrammargames", resave: false, saveUninitialized: false })
+);
+app.use(require("morgan")("dev"));
+app.use(passport.initialize());
+app.use(passport.session());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
@@ -32,9 +40,6 @@ mongoose.connect(
 );
 
 // google auth
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 passport.serializeUser(function(user, done) {
     done(null, user);
@@ -74,6 +79,7 @@ passport.use(
     )
 );
 
+
 app.get(
     "/auth/google",
     passport.authenticate("google", { scope: OAUTH_SCOPES }),
@@ -89,15 +95,13 @@ app.get(
     passport.authenticate("google", { failureRedirect: "/login" }),
     function(req, res) {
         console.log("req.user is ", req.user);
+        res.cookie("gg-user", req.user.displayName);
         res.redirect(
             process.env.NODE_ENV === "production" ? "/" : "//localhost:3000/"
         );
-        res.json(req.user.displayName);
     }
 );
 /* End Auth */
-
-app.get()
 
 // route for logging out
 app.get('/logout', function(req, res) {
