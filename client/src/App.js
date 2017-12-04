@@ -47,5 +47,5 @@ const App = () =>
       <Route path="/leaderboard" component={Table} />
     </div>
   </Router>
-  
+    
 export default App;

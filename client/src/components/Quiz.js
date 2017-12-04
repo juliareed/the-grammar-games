@@ -16,8 +16,6 @@ import "../components/quiz.css"
 
 export default class Quiz extends React.Component {
 
-
-
   constructor(props) {
       super(props)
       this.state = {
