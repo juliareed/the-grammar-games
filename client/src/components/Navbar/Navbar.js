@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } f
 import "./navbar.css";
 import LoginBackground from './signin.png';
 import LogoutBackground from './signout.png';
+import axios from 'axios';
 
 const textColor = {
   color: "white",
@@ -27,10 +28,25 @@ export default class Example extends React.Component {
       isOpen: false
     };
   }
+
+  componentDidMount() {
+    this.displayName();
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
+  }
+
+  displayName() {
+    axios.get('auth/google/callback')
+    .then(function(res){
+      res.redirect(
+      process.env.NODE_ENV === "production" ? "/" : "//localhost:3000/"
+      );
+      console.log(res.user.displayName);
+    })
   }
 
   render() {
@@ -41,6 +57,9 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink>
+              <NavItem>
               <NavItem>
                 <NavLink style={tabColor} href="/">Home</NavLink>
               </NavItem>

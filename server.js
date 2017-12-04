@@ -28,50 +28,50 @@ mongoose.connect(
     }
 );
 // schema that will hold user info
-var UserSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        unique: true,
-        required: true,
-        trim: true
-    },
-    email: {
-        type: String,
-        unique: true,
-        required: true,
-        trim: true
-    },
-    points: {
-        type: Number,
-        required: true,
-        trim: true
-    }
-});
+// var UserSchema = new mongoose.Schema({
+//     name: {
+//         type: String,
+//         unique: true,
+//         required: true,
+//         trim: true
+//     },
+//     email: {
+//         type: String,
+//         unique: true,
+//         required: true,
+//         trim: true
+//     },
+//     points: {
+//         type: Number,
+//         required: true,
+//         trim: true
+//     }
+// });
 
-var User = mongoose.model('User', UserSchema);
-module.exports = User;
+// var User = mongoose.model('User', UserSchema);
+// module.exports = User;
 
 // insert data into mongodb
 
-if (req.body.name &&
-    req.body.email &&
-    req.body.points) {
+// if (req.body.name &&
+//     req.body.email &&
+//     req.body.points) {
 
-    var userData = {
-        email: req.body.email,
-        name: req.body.name,
-        points: req.body.points
-    }
+//     var userData = {
+//         email: req.body.email,
+//         name: req.body.name,
+//         points: req.body.points
+//     }
 
-    //use schema.create to insert data into the db
-    User.create(userData, function(err, user) {
-        if (err) {
-            return next(err)
-        } else {
-            return res.redirect('/profile');
-        }
-    });
-}
+//     //use schema.create to insert data into the db
+//     User.create(userData, function(err, user) {
+//         if (err) {
+//             return next(err)
+//         } else {
+//             return res.redirect('/profile');
+//         }
+//     });
+// }
 
 // google auth
 
@@ -110,7 +110,9 @@ app.get(
     "/auth/google",
     passport.authenticate("google", { scope: OAUTH_SCOPES }),
     function(req, res) {
-
+        res.redirect(
+            process.env.NODE_ENV === "production" ? "/" : "//localhost:3000/"
+        );
     }
 );
 
@@ -122,6 +124,7 @@ app.get(
         res.redirect(
             process.env.NODE_ENV === "production" ? "/" : "//localhost:3000/"
         );
+        res.json(req.user.displayName);
     }
 );
 /* End Auth */
