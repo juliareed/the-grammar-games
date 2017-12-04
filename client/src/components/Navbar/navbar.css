@@ -8,19 +8,14 @@
 
 .NavbarBrand {
     font-size: 50px;
+    font-family: 'Bungee Hairline', cursive;
 }
 
-
-/* .img {
-    width: 10px;
-    height: 10px;
-} */
-
 #login {
-    width: 130px;
+    width: 150px;
     height: 40px;
     background-image: url("./signin.png");
-    background-size: 130px 40px;
+    background-size: 150px 40px;
     display: inline-block;
     padding-right: 50px;
 }

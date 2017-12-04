@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './table.css';
 
 export default class Tablerow extends Component {
   render() {

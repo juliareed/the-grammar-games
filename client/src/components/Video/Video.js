@@ -1,5 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
+import { Link } from "react-router-dom";
 import "./video.css"
 
 class Video extends React.Component {
@@ -12,11 +13,14 @@ class Video extends React.Component {
       }
     };
     return (
+      <div>
       <YouTube className = "youtubevid"
         videoId={this.props.match.params.vidId}
         opts={opts}
         onReady={this._onReady}
       />
+      <Link to="/third/sentence/:vidId/data"><button className="btn">Take the Quiz!</button></Link>
+      </div>
     );
   }
 

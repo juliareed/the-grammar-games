@@ -4,4 +4,7 @@ p {
 
 .btn {
     margin: 20px;
+    background-color: #A0B9BF;
+    color: white;
+    font-family: 'Crimson Text', serif;
 }

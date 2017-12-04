@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './table.css';
 
 export default class Tablehead extends Component {
   render() {
     return (
-      <thead>
+      <thead id="table-head">
         <tr>
           <th>#</th>
           <th>Username</th>

@@ -1,7 +1,18 @@
 import React from 'react'
-import Question from './Question'
-import data from "./data"
-
+import Question from '../components/Question'
+import data from "../data/data"
+import data2 from "../data/data2"
+import data3 from "../data/data3"
+import data4 from "../data/data4"
+import data5 from "../data/data5"
+import data6 from "../data/data6"
+import data7 from "../data/data7"
+import data8 from "../data/data8"
+import data9 from "../data/data9"
+import data10 from "../data/data10"
+import data11 from "../data/data11"
+import data12 from "../data/data12"
+import "../components/quiz.css"
 
 export default class Quiz extends React.Component {
 
@@ -20,8 +31,28 @@ export default class Quiz extends React.Component {
       let quizId = this.props.match.params.quizId;
       if (quizId === "data") {
       this.setState({quiz: data })
-      } else if (quizId === "somethingelse") {
-        this.setState({quiz: "" })
+      } else if (quizId === "data2") {
+        this.setState({quiz: data2 })
+      }else if (quizId === "data3") {
+        this.setState({quiz: data3 })
+      }else if (quizId === "data4") {
+        this.setState({quiz: data4 })
+      }else if (quizId === "data5") {
+        this.setState({quiz: data5 })
+      }else if (quizId === "data6") {
+        this.setState({quiz: data6 })
+      }else if (quizId === "data7") {
+        this.setState({quiz: data7 })
+      }else if (quizId === "data8") {
+        this.setState({quiz: data8 })
+      }else if (quizId === "data9") {
+        this.setState({quiz: data9 })
+      }else if (quizId === "data10") {
+        this.setState({quiz: data10 })
+      }else if (quizId === "data11") {
+        this.setState({quiz: data11 })
+      }else if (quizId === "data12") {
+        this.setState({quiz: data12 })
       }
   }
 
@@ -59,11 +90,11 @@ export default class Quiz extends React.Component {
     }
 
     return (
-      <div>
+      <div id="quiz">
         <h1>{quiz.title}</h1>
         {completed ?
           <div>
-            <p>Congratulation, you finished the quiz</p>
+            <p>Congratulations, you finished the quiz!</p>
             Your score is {score}
           </div>
         :
