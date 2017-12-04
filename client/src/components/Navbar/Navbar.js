@@ -46,6 +46,9 @@ export default class Example extends React.Component {
       process.env.NODE_ENV === "production" ? "/" : "//localhost:3000/"
       );
       console.log(res.user.displayName);
+      let username = res.user.displayName;
+      console.log(username);
+      document.getElementById("username").appendChild(`<p>${username}<p>`)
     })
   }
 
@@ -58,9 +61,6 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink>
-              <NavItem>
-              <NavItem>
                 <NavLink style={tabColor} href="/">Home</NavLink>
               </NavItem>
               <NavItem>
@@ -68,6 +68,8 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink id="login" href={authUrl} />
+              </NavItem>
+              <NavItem id="username">
               </NavItem>
               <NavItem>
                 <NavLink> <br/> </NavLink>
