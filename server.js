@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+const Student = require('./models/user');
+const findOrCreate = require("mongoose-findorcreate");
 
 // passport JS google auth keys
 const OAUTH_CLIENT_ID = "613938978762-sfucnbn3r4lmp5j17pjt8ncbq1m2nlhi.apps.googleusercontent.com";
@@ -100,8 +102,18 @@ passport.use(
         },
         function(accessToken, refreshToken, profile, done) {
 
-            console.log('Yay Google Profile', profile);
-            done(null, profile);
+            // const { username, displayName } = profile;
+
+            const displayName = 'Julia'
+                // needs a database to handle oauth postbacks
+            if (mongoose.connection.readyState === 0)
+                throw new Error("Need MONGO connection to handle OAuth");
+
+            Student.findOrCreate({ displayName: displayName })
+                .then(({ doc, created }) => {
+                    done(null, doc);
+                })
+                .catch(err => done(err));
         }
     )
 );
