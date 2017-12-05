@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tablehead from './Tablehead';
 import Tablerow from './Tablerow';
+import $ from "jquery"
 import 'pure-css';
 import './table.css';
 
@@ -15,10 +16,9 @@ export default class Table extends Component {
   }
 
   componentDidMount() {
-    fetch('https://fcctop100.herokuapp.com/api/fccusers/top/recent')
-      .then((response) => response.json())
-      .then((json) => this.setState({
-        data: json
+    $.get("/scores")
+      .then((response) => this.setState({
+        data: response
     }))
   }
 
@@ -34,9 +34,9 @@ export default class Table extends Component {
       <Tablerow
         key={row.username}
         position={index + 1}
-        username={row.username}
-        alltime={row.alltime}
-        recent={row.recent}
+        username={row.displayName}
+        alltime={row.scores}
+        recent={row.scores}
         className={index % 2 === 0 ? 'pure-table-odd' : ''}
       />)
 

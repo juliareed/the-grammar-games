@@ -1,6 +1,7 @@
 import React from 'react'
 import Question from '../components/Question'
 import Counter from "./Counter/Counter"
+import $ from "jquery"
 import data from "../data/data"
 import data2 from "../data/data2"
 import data3 from "../data/data3"
@@ -63,9 +64,19 @@ export default class Quiz extends React.Component {
       let score = this.state.score
       this.state.answers.map((answer, i) => (
         score = score + this.state.quiz.questions[i].answers[answer].point
+
       ))
     }
   }
+
+  handlePost() {
+    let score = this.state.score;
+    $.post("/post", function(data){
+      scores: score
+      //TO DO: NEEDS TO ALSO SEND DISPLAY NAME
+    })
+  }
+
 
   handleAnswerSelected(event) {
     let list = [...this.state.answers.slice(0, this.state.index),
@@ -86,6 +97,7 @@ export default class Quiz extends React.Component {
       this.state.answers.map((answer, i) => (
         score = score + this.state.quiz.questions[i].answers[answer].point
       ))
+      this.handlePost();
     }
 
     return (

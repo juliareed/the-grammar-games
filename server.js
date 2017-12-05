@@ -1,3 +1,5 @@
+// import { data } from "../../Library/Caches/typescript/2.6/node_modules/@types/xdg-basedir";
+
 const express = require("express");
 const session = require("express-session");
 const bodyParser = require("body-parser");
@@ -10,6 +12,7 @@ const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const Student = require('./models/user');
 const findOrCreate = require("mongoose-findorcreate");
+var db = require("./models");
 
 // passport JS google auth keys
 const OAUTH_CLIENT_ID = "613938978762-sfucnbn3r4lmp5j17pjt8ncbq1m2nlhi.apps.googleusercontent.com";
@@ -107,6 +110,22 @@ app.get(
 app.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
+});
+
+app.get("/scores", function(req, res) {
+    db.Student
+      .find({})
+      .then(function(data) {
+        res.json(data);
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
+  });
+
+app.post("/post", function (req, res) {
+db.Student.create({displayName: req.body.displayName, scores: req.body.scores})
+res.redirect("/");
 });
 
 app.listen(PORT, function() {

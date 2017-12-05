@@ -4,7 +4,7 @@ const findOrCreate = require("mongoose-findorcreate");
 
 const schema = new Schema({
     displayName: { type: String },
-    scores: { type: Date, default: Date.now }
+    scores: { type: Number }
 });
 
 schema.plugin(findOrCreate);
