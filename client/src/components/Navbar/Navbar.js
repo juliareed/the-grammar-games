@@ -49,6 +49,12 @@ export default class Example extends React.Component {
     });
   }
 
+  logOut() {
+    console.log('logout is working');
+    let cookie = cookies.remove('gg-user');
+    $('.username').empty()
+  }
+
   render() {
     return (
       <div>
@@ -70,13 +76,13 @@ export default class Example extends React.Component {
                 <NavLink> <br/> </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink id="logout" href="/logout" />
+                <NavLink id="logout" href='/' onClick={this.logOut}/>
               </NavItem>
             </Nav>
-            
           </Collapse>
         </Navbar>
          <div className="username" style={userStyle} />
+        
       </div>
     );
   }

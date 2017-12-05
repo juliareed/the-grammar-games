@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
 import Quiz from '../Quiz.js';
 
 import "./main.css"
@@ -23,7 +22,6 @@ class Main extends Component {
               </div>
           </p>
           <br/>
-          <Footer />
           </div>
        
        

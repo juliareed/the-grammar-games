@@ -16,6 +16,7 @@ import data11 from "../data/data11"
 import data12 from "../data/data12"
 import "../components/quiz.css"
 import { Link } from "react-router-dom";
+import Footer from "./Footer/Footer";
 
 export default class Quiz extends React.Component {
 
@@ -123,6 +124,10 @@ export default class Quiz extends React.Component {
           : ''}
           </div>
         }
+          <br />
+          <br />
+          <br />
+          <Footer />
       </div>
     )
   }

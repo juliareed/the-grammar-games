@@ -5,7 +5,7 @@ class Footer extends React.Component{
     render() {
         return (
             <footer>
-                <p className = "brandname"><hr />©Techy && Cute</p>
+                <p className = "brandname">©Techy && Cute</p>
             </footer>
         )
     }

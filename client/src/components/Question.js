@@ -1,5 +1,13 @@
 import React from 'react'
 
+const Button = {
+  textAlign: 'center',
+  margin: 20,
+  backgroundColor: '#A0B9BF',
+  color: 'white',
+  fontFamily: 'Crimson Text'
+}
+
 const Question = ({
   question,
   index,
@@ -18,7 +26,7 @@ const Question = ({
         </li>
       )}
       </ol>
-      <button onClick={onSubmit}>Submit</button>
+      <button style={Button} className='btn' onClick={onSubmit}>Submit</button>
     </div>
   )
 }
