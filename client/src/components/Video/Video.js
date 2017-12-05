@@ -19,7 +19,10 @@ class Video extends React.Component {
         opts={opts}
         onReady={this._onReady}
       />
+      <div className='button'>
       <Link to="/third/sentence/:vidId/data"><button className="btn">Take the Quiz!</button></Link>
+      <br />
+      </div>
       </div>
     );
   }

@@ -8,3 +8,7 @@ p {
     color: white;
     font-family: 'Crimson Text', serif;
 }
+
+Footer {
+    flex: 0 0 auto;
+}
