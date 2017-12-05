@@ -6,6 +6,7 @@ import Fifth from "../src/components/Grades/Fifth.js"
 import Sixth from "../src/components/Grades/Sixth.js"
 import Main from "../src/components/Main/Main.js"
 import Video from "./components/Video/Video"
+import Leaderboard from "./components/Leaderboard/Leaderboard"
 import Quiz from "./components/Quiz"
 import Table from './components/Leaderboard/Table';
 import Tablehead from './components/Leaderboard/Tablehead';
@@ -44,7 +45,7 @@ const App = () =>
       <Route path="/sixth/possessivepronouns/:vidId/:quizId" component={Quiz} />
       <Route path="/sixth/reflexivepronouns/:vidId/:quizId" component={Quiz} />
       <Route path="/sixth/perfectverbs/:vidId/:quizId" component={Quiz} />
-      <Route path="/leaderboard" component={Table} />
+      <Route path="/leaderboard" component={Leaderboard} />
     </div>
   </Router>
     
