@@ -16,6 +16,7 @@ import data11 from "../data/data11"
 import data12 from "../data/data12"
 import "../components/quiz.css"
 import { Link } from "react-router-dom";
+import axios from "axios"
 
 export default class Quiz extends React.Component {
 
@@ -69,15 +70,6 @@ export default class Quiz extends React.Component {
     }
   }
 
-  handlePost() {
-    let score = this.state.score;
-    $.post("/post", function(data){
-      scores: score
-      //TO DO: NEEDS TO ALSO SEND DISPLAY NAME
-    })
-  }
-
-
   handleAnswerSelected(event) {
     let list = [...this.state.answers.slice(0, this.state.index),
                 parseInt(event.target.value),
@@ -97,7 +89,8 @@ export default class Quiz extends React.Component {
       this.state.answers.map((answer, i) => (
         score = score + this.state.quiz.questions[i].answers[answer].point
       ))
-      this.handlePost();
+      axios.post("/post", {scores: score});
+      
     }
 
     return (

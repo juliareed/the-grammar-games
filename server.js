@@ -12,7 +12,9 @@ const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const Student = require('./models/user');
 const findOrCreate = require("mongoose-findorcreate");
+const createOrUpdate = require('mongoose-create-or-update');
 var db = require("./models");
+let displayName = null
 
 // passport JS google auth keys
 const OAUTH_CLIENT_ID = "613938978762-sfucnbn3r4lmp5j17pjt8ncbq1m2nlhi.apps.googleusercontent.com";
@@ -68,7 +70,7 @@ passport.use(
 
             // const { username, displayName } = profile;
 
-            const displayName = profile.displayName;
+            displayName = profile.displayName;
             // needs a database to handle oauth postbacks
             if (mongoose.connection.readyState === 0)
                 throw new Error("Need MONGO connection to handle OAuth");
@@ -124,9 +126,17 @@ app.get("/scores", function(req, res) {
   });
 
 app.post("/post", function (req, res) {
-db.Student.create({displayName: req.body.displayName, scores: req.body.scores})
-res.redirect("/");
+db.Student.create({displayName: displayName, scores: req.body.scores})
+res.status(200)
 });
+
+// app.post("/post", function (req, res) {
+//     db.Student.update(
+//         { displayName: req.body.displayName },
+//         { $set: { scores: req.body.scores } })
+//     res.status(200)
+// });
+
 
 app.listen(PORT, function() {
     console.log(`🌎 ==> Server now on port ${PORT}!`);
