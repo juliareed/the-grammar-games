@@ -7,9 +7,6 @@ class Sixth extends Component {
     render() {
   
       return (
-        <div className="main-container">
-          <div className="container">
-          <br/>
           <p>
            {  (window.location.pathname === "/sixth/possessivepronouns" || window.location.pathname === "/sixth/reflexivepronouns" || window.location.pathname === "/sixth/perfectverbs") ? "" :
             <div>
@@ -19,11 +16,6 @@ class Sixth extends Component {
             </div>
           }
           </p>
-          <br/>
-          </div>
-        </div>
-       
-       
       );
     }
   };

@@ -10,10 +10,9 @@ class Main extends Component {
     render() {
   
       return (
-        <div>
-          <Navbar />
-          <br/>
+      
           <p>
+          <Navbar />
             <div>
                <Link to="/third"><button className="btn">3rd Grade</button></Link>
                <Link to="/fourth"><button className="btn">4th Grade</button></Link>
@@ -21,8 +20,6 @@ class Main extends Component {
                <Link to="/sixth"><button className="btn">6th Grade</button></Link>
               </div>
           </p>
-          <br/>
-          </div>
        
        
       );

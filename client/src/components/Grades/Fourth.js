@@ -7,9 +7,6 @@ class Fourth extends Component {
     render() {
   
       return (
-        <div className="main-container">
-          <div className="container">
-          <br/>
           <p>
           {  (window.location.pathname === "/fourth/phrases" || window.location.pathname === "/fourth/conjunctions" || window.location.pathname === "/fourth/relativepronouns") ? "" :
             <div>
@@ -19,11 +16,6 @@ class Fourth extends Component {
             </div>
           }
           </p>
-          <br/>
-          </div>
-        </div>
-       
-       
       );
     }
   };

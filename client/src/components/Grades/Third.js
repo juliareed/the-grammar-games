@@ -7,9 +7,6 @@ class Third extends Component {
     render() {
       
       return (
-        <div className="main-container">
-          <div className="container">
-          <br/>
           <p>
 
           {  (window.location.pathname === "/third/sentence" || window.location.pathname === "/third/nouns" || window.location.pathname === "/third/pronouns") ? "" :
@@ -20,9 +17,6 @@ class Third extends Component {
             </div>
           }
          </p>
-          <br/>
-          </div>
-        </div>
       );
     }
   };

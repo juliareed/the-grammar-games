@@ -7,9 +7,6 @@ class Fifth extends Component {
     render() {
   
       return (
-        <div className="main-container">
-          <div className="container">
-          <br/>
           <p>
           {  (window.location.pathname === "/fifth/punctuating" || window.location.pathname === "/fifth/correlativeconjunctions" || window.location.pathname === "/fifth/introverbtense") ? "" :
             <div>
@@ -19,11 +16,6 @@ class Fifth extends Component {
             </div>
           }
           </p>
-          <br/>
-          </div>
-        </div>
-       
-       
       );
     }
   };
