@@ -1,5 +1,6 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Link } from "react-router-dom";
 import "./navbar.css";
 import LoginBackground from './signin.png';
 import LogoutBackground from './signout.png';
@@ -64,10 +65,16 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink style={tabColor} href="/">Home</NavLink>
+                <Link style={tabColor} to="/">Home</Link>
               </NavItem>
               <NavItem>
-                <NavLink style={tabColor} href="/leaderboard">Leaderboard</NavLink>
+                <NavLink> <br/> </NavLink>
+              </NavItem>
+              <NavItem>
+                <Link style={tabColor} to="/leaderboard">Leaderboard</Link>
+              </NavItem>
+              <NavItem>
+                <NavLink> <br/> </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink id="login" href={authUrl} />
