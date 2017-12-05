@@ -16,11 +16,8 @@ import data11 from "../data/data11"
 import data12 from "../data/data12"
 import "../components/quiz.css"
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import axios from "axios"
-=======
 import Footer from "./Footer/Footer";
->>>>>>> 8ef5c92cdc428cfdae1e96bf250d295d1b0c0532
 
 export default class Quiz extends React.Component {
 
