@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar"
 import "./grade.css";
 
 class Fourth extends Component {
@@ -8,6 +9,7 @@ class Fourth extends Component {
   
       return (
           <p>
+            <Navbar />
           {  (window.location.pathname === "/fourth/phrases" || window.location.pathname === "/fourth/conjunctions" || window.location.pathname === "/fourth/relativepronouns") ? "" :
             <div>
               <Link to="/fourth/phrases/7dOBMUESkqk"><button className="btn">Prepositional Phrases</button></Link>

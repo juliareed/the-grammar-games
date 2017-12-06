@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar"
 import "./grade.css";
 
 class Third extends Component {
@@ -8,7 +9,7 @@ class Third extends Component {
       
       return (
           <p>
-
+          <Navbar />
           {  (window.location.pathname === "/third/sentence" || window.location.pathname === "/third/nouns" || window.location.pathname === "/third/pronouns") ? "" :
             <div>
               <Link to={"/third/sentence/B9bJaoIHRp4"} ><button className="btn">Three Ways to End a Sentence</button></Link>

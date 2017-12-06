@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar"
 import "./grade.css";
 
 class Sixth extends Component {
@@ -8,6 +9,7 @@ class Sixth extends Component {
   
       return (
           <p>
+            <Navbar />
            {  (window.location.pathname === "/sixth/possessivepronouns" || window.location.pathname === "/sixth/reflexivepronouns" || window.location.pathname === "/sixth/perfectverbs") ? "" :
             <div>
               <Link to="/sixth/possessivepronouns/bhzh8VDykc4"><button className="btn">Possesive Pronouns</button></Link>

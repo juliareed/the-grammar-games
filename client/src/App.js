@@ -11,12 +11,14 @@ import Quiz from "./components/Quiz"
 import Table from './components/Leaderboard/Table';
 import Tablehead from './components/Leaderboard/Tablehead';
 import Tablerow from './components/Leaderboard/Tablerow';
+import Footer from "./components/Footer/Footer"
 
 
 const App = () =>
+<div>
   <Router>
     <div>
-      <Route path="/" component={Main} />
+      <Route exact path="/" component={Main} />
       <Route path="/third" component={Third} />
       <Route path="/fourth" component={Fourth} />
       <Route path="/fifth" component={Fifth} />
@@ -48,5 +50,7 @@ const App = () =>
       <Route path="/leaderboard" component={Leaderboard} />
     </div>
   </Router>
+  <Footer />
+  </div>
     
 export default App;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar"
 import "./grade.css";
 
 class Fifth extends Component {
@@ -8,6 +9,7 @@ class Fifth extends Component {
   
       return (
           <p>
+            <Navbar />
           {  (window.location.pathname === "/fifth/punctuating" || window.location.pathname === "/fifth/correlativeconjunctions" || window.location.pathname === "/fifth/introverbtense") ? "" :
             <div>
               <Link to="/fifth/punctuating/DBMQOK64VQY"><button className="btn">Punctuating a List</button></Link>
